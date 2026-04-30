@@ -1,0 +1,22 @@
+{
+  "name": "react-component-library",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abubakaraliev/react-component-library.git"
+  },
+  "author": "aliev abubakar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abubakaraliev/react-component-library/issues"
+  },
+  "homepage": "https://github.com/abubakaraliev/react-component-library#readme",
+  "devDependencies": {
+    "typescript": "^6.0.3"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0"
+  }
+}
