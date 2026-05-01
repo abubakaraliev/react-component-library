@@ -19,7 +19,8 @@
     "build-storybook": "storybook build",
     "prepare": "husky",
     "lint": "eslint ./src/**/*.{ts,tsx}",
-    "lint:fix": "eslint ./src/**/*.{ts,tsx} --fix"
+    "lint:fix": "eslint ./src/**/*.{ts,tsx} --fix",
+    "release": "standard-version"
   },
   "repository": {
     "type": "git",
@@ -51,6 +52,8 @@
     "@babel/preset-env": "^7.29.3",
     "@babel/preset-react": "^7.28.5",
     "@babel/preset-typescript": "^7.28.5",
+    "@commitlint/cli": "^20.5.3",
+    "@commitlint/config-conventional": "^20.5.3",
     "@eslint/js": "^9.39.4",
     "@rollup/plugin-commonjs": "^29.0.2",
     "@rollup/plugin-node-resolve": "^16.0.3",
@@ -72,6 +75,7 @@
     "react-dom": "^19.2.5",
     "rollup-plugin-dts": "^6.4.1",
     "rollup-plugin-postcss": "^4.0.2",
+    "standard-version": "^9.5.0",
     "storybook": "^10.3.6",
     "styled-components": "^6.4.1",
     "typescript": "^6.0.3",
