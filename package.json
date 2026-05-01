@@ -1,11 +1,43 @@
 {
   "name": "react-component-library",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
-  "main": "index.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "test": "jest --watchAll --verbose",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "prepare": "husky",
+    "lint": "eslint ./src/**/*.{ts,tsx}",
+    "lint:fix": "eslint ./src/**/*.{ts,tsx} --fix"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/abubakaraliev/react-component-library.git"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
+  },
+  "babel": {
+    "sourceType": "unambiguous",
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-typescript",
+      [
+        "@babel/preset-react",
+        {
+          "runtime": "automatic"
+        }
+      ]
+    ]
   },
   "author": "aliev abubakar",
   "license": "ISC",
@@ -14,7 +46,34 @@
   },
   "homepage": "https://github.com/abubakaraliev/react-component-library#readme",
   "devDependencies": {
-    "typescript": "^6.0.3"
+    "@babel/preset-env": "^7.29.3",
+    "@babel/preset-react": "^7.28.5",
+    "@babel/preset-typescript": "^7.28.5",
+    "@eslint/js": "^9.39.4",
+    "@rollup/plugin-commonjs": "^29.0.2",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@rollup/plugin-typescript": "^12.3.0",
+    "@storybook/react-vite": "^10.3.6",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/jest": "^30.0.0",
+    "@types/react": "^19.2.14",
+    "eslint": "^9.39.4",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-unused-imports": "^4.4.1",
+    "globals": "^17.5.0",
+    "husky": "^9.1.7",
+    "jest": "^30.3.0",
+    "jest-environment-jsdom": "^30.3.0",
+    "jiti": "^2.6.1",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "rollup-plugin-dts": "^6.4.1",
+    "rollup-plugin-postcss": "^4.0.2",
+    "storybook": "^10.3.6",
+    "styled-components": "^6.4.1",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.59.1"
   },
   "peerDependencies": {
     "react": "^18.0.0"
